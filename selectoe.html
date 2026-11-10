@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+ <!-- <script src="js/jquery.min.js"></script> -->
+</head>
+
+</head>
+<body>
+   <h1>this is heading with h1</h1> 
+   <h2>this is heading with h1</h2> 
+<p>this is frist paragraph</p>
+
+<ul>
+    <li>belly</li>
+    <li>chamli</li>
+    <li>waterlily</li>
+    <li>rose</li>
+</ul>
+<button class="btn1" >hide all</button>>
+<button class="btn2" >hide paragraph</button>>
+<button class="btn3" >hide list item</button>>
+
+    <!--JQuery  -->
+<script>
+    $(document).ready(function(){
+$(".btn1").click(function(){
+    $("*").hide();
+});
+$(".btn2").click(function(){
+    $("p").hide();
+});
+$(".btn3").click(function(){
+    $("ul li:last").hide();
+});
+
+    });
+</script>
+
+</body>
+</html>
