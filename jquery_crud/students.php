@@ -3,11 +3,20 @@ $db = new mysqli("localhost","root","","jquery_crud");
 
 $raw= $db->query("SELECT * FROM students");
 
-$table = "<table border='1'><tr><th>name</th><th>address</th></tr>";
+$table = "<table border='1'>
+<tr>
+<th>name</th>
+<th>address</th>
+<th>Action</th>
+</tr>";
 
 $rows = "";
 while($record = $raw->fetch_assoc()){
-$rows .= "<tr><td>" . $record['name'] ."</td><td>" . $record['adress'] . "</td></tr>";
+$rows .= "<tr>
+<td>" . $record['name'] ."</td>
+<td>" . $record['adress'] . "</td>
+<td> Edit | <button id= ". $record['id']. " class='btnDel'> Delete</button> </td>
+</tr>";
 }
 
 $table .= $rows;
